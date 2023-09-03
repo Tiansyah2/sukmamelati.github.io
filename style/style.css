@@ -1,323 +1,373 @@
 body {
-    background: pink;
-    height: 100%;
-    margin: 0;
-  }
-
-/* hide and show */
-
-body div .slider .wrapper {
-        display: none;
-}
-
-/* animating */
-
-.birthday-card {
-        transition: transform 3s ease-in-out;
-        transform: translateY(0px); /* Default position */
-}
-
-.animating {
-        transform: translateX(100px); /* Move content down after click */
-      }  
-
-body .slider span img {
-        width: 100px;
-        height: 130px;
-        display: absolute;
-        overflow: hidden;
-        padding: 40px 30px 20px 50px;
-}
-
-
-body .slider span {
-        margin: 20px -10px -10px -10px;
-        box-sizing: border-box;
-        display: inline-block;
-}
-
-.slider{
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        width: 100px;
-        height: 130px;
-        margin-left: 15px;
-}
-
-#animasi {
-        opacity: 0; /* Nilai awal opasitas 0 */
-        animation: fadeIn 50s infinite; /* Animasi muncul selama 1 detik */
-}
-
-.slider .satu {
-        transform-style: preserve-3d;
-        animation: rotate 17s linear infinite;
-}
-
-.slider .dua {
-        transform-style: preserve-3d;
-        animation: rotate 14s linear infinite;
-}
-
-.slider .tiga {
-        transform-style: preserve-3d;
-        animation: rotate 19s linear infinite;
-}
-
-.slider .empat, .lima, .enam, .tujuh, .delapan {
-        position: absolute;
-        transform-style: preserve-3d;
-}
-
-.slider .empat {
-        animation: rotate 18s linear infinite;
-        margin-top: -360px;
-        margin-left: -390px;
-        width: 40px;
-        height: 80px;
-}
-
-.slider .lima {
-        animation: rotate 11s linear infinite;
-        margin-top: -330px;
-        margin-left: -100px;
-        width: 28px;
-        height: 52px;
-}
-
-.slider .enam {
-        animation: rotate 14s linear infinite;
-        margin-top: -160px;
-        margin-left: -360px;
-        width: 34px;
-        height: 60px;
-}
-
-.slider .tujuh {
-        animation: rotate 13s linear infinite;
-        margin-top: -16px;
-        margin-left: -250px;
-        width: 42px;
-        height: 80px;
-}
-.slider .delapan {
-        animation: rotate 16s linear infinite;
-        margin-top: 30px;
-        margin-left: -90px;
-        width: 35px;
-        height: 65px;
-}
-
-.wrapper {
-        display: flex;
-}
-
-@keyframes rotate {
-        0% {
-                transform: perspective(1000px) rotateY(0deg);
-        }
-
-        100% {
-                transform: perspective(1000px) rotateY(360deg);
-        }
-}
-
-@keyframes fadeIn {
-        /* Gantii 0% menjadi 10% dan isi nya di bawah ini setelah selesai setting semua final
-        10% {
-                opacity: 0.09;
-        } */
-        10% {
-                opacity: 0.09;
-        }
-        20% {
-                opacity: 0.2;
-        }
-        20% {
-                opacity: 0.4;
-        }
-        30% {
-                opacity: 0.7;
-        }
-        40% {
-                opacity: 1;
-        }
-        50% {
-                opacity: 0.8;
-        }
-        60% {
-                opacity: 0.6;
-        }
-        70% {
-                opacity: 0.4;
-        }
-        80% {
-                opacity: 0.2;
-        }
-        100% {
-          opacity: 0.1;
-        }
+        background: pink;
+        height: 100%;
+        margin: 0;
       }
-  
+    
+    /* hide and show */
+    
+    body div .slider .wrapper {
+            display: none;
+    }
+    
+    /* animating */
+    
     .birthday-card {
-    position: relative;
-    width: 300px;
-    height: 395px;
-    border: 10px solid #ef5050;
-    margin: 60px auto 0 auto;
-    -webkit-box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0.5))), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXxBT3o0SFFDbVdEa3x8ZW58MHx8fHw%3D&w=1000&q=80");
-    background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXxBT3o0SFFDbVdEa3x8ZW58MHx8fHw%3D&w=1000&q=80");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  #container {
-        width: 300px;
-        margin-left: 24px;
-  }
-  
-
-  .birthday-card .text {
-    font-family: 'Nobile', sans-serif;
-    margin-top: -50px;
-  }
-  
-  .birthday-card .text > p {
-    font-size: 1.1em;
-    color: #331717;
-    list-style: 1.4;
-    font-style: italic;
-    text-align: center;
-    margin-top: -20px;
-    padding: 20px 5px 0 5px;
-  }
-  
-  .birthday-card .text .title {
-    font-size: 1.5em;
-  }
-  
-  .birthday-card .cover-outer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: -10px 0 0 -10px;
-    border: 10px solid #ef5050;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-    -webkit-transform: perspective(800px) rotateY(0deg);
-            transform: perspective(800px) rotateY(0deg);
-    -webkit-transition: all 2.5s ease-in-out;
-    transition: all 2.5s ease-in-out;
-  }
-  
-  .birthday-card .cover-outer img {
-    -webkit-box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
-            box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
-    border-radius: 5px;
-  }
-  
-  .birthday-card .cover-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 10px solid #ef5050;
-    background-color: #ef5050;
-    margin: -10px 0px 0 -10px;
-    -webkit-backface-visibility: visible;
-            backface-visibility: visible;
-    -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform-origin: 0% 50%;
-            transform-origin: 0% 50%;
-    -webkit-transform: perspective(800px) rotateY(0deg);
-            transform: perspective(800px) rotateY(0deg);
-    -webkit-transition: all 2.5s ease-in-out;
-    transition: all 2.5s ease-in-out;
-    overflow: hidden;
-  }
-  
-  .birthday-card .cover-inner img {
-    -webkit-transform: rotateY(170deg);
-            transform: rotateY(170deg);
-  }
-  
-  .birthday-card:hover .cover-outer {
-    -webkit-transform: perspective(800px) rotateY(-170deg);
-            transform: perspective(800px) rotateY(-170deg);
-  }
-  
-  .birthday-card:hover .cover-inner {
-    -webkit-transform: perspective(800px) rotateY(-170deg);
-            transform: perspective(800px) rotateY(-170deg);
-    -webkit-box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
-  }
-
-  @media (max-width: 425px) {
-    .birthday-card, .cover-inner {
-        width: 170px;
-        height: 250px;
-        font-size: 10px;
-        margin-right: 20px;
+            transition: transform 3s ease-in-out;
+            transform: translateY(0px); /* Default position */
     }
-
-    .cover-outer {
-        height: 300px;
+    
+    .animating {
+            transform: translateX(100px); /* Move content down after click */
+          }  
+    
+    body .slider span img {
+            width: 100px;
+            height: 130px;
+            display: absolute;
+            overflow: hidden;
+            padding: 40px 30px 20px 50px;
     }
-
-    .birthday-card .text .title {
-        margin: 40px auto 60px auto;
-      }
-
-      body .slider span img {
-        width: 70px;
-        height: 130px;
-        display: inline-block;
-      }
-
-      body .slider span img .dua {
-        width: 70px;
-        height: 130px;
-        display: absolute;
+    
+    
+    body .slider span {
+            margin: 20px -10px -10px -10px;
+            box-sizing: border-box;
+            display: inline-block;
+    }
+    
+    .slider{
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100px;
+            height: 130px;
+            margin-left: 15px;
+    }
+    
+    #animasi {
+            opacity: 0; /* Nilai awal opasitas 0 */
+            animation: fadeIn 50s infinite; /* Animasi muncul selama 1 detik */
+    }
+    
+    .slider .satu {
+            transform-style: preserve-3d;
+            animation: rotate 17s linear infinite;
+    }
+    
+    .slider .dua {
+            transform-style: preserve-3d;
+            animation: rotate 14s linear infinite;
+    }
+    
+    .slider .tiga {
+            transform-style: preserve-3d;
+            animation: rotate 19s linear infinite;
+    }
+    
+    .slider .empat, .lima, .enam, .tujuh, .delapan {
+            position: absolute;
+            transform-style: preserve-3d;
+    }
+    
+    .slider .empat {
+            animation: rotate 18s linear infinite;
+            margin-top: -360px;
+            margin-left: -390px;
+            width: 40px;
+            height: 80px;
+    }
+    
+    .slider .lima {
+            animation: rotate 11s linear infinite;
+            margin-top: -330px;
+            margin-left: -100px;
+            width: 28px;
+            height: 52px;
+    }
+    
+    .slider .enam {
+            animation: rotate 14s linear infinite;
+            margin-top: -160px;
+            margin-left: -360px;
+            width: 34px;
+            height: 60px;
+    }
+    
+    .slider .tujuh {
+            animation: rotate 13s linear infinite;
+            margin-top: -16px;
+            margin-left: -250px;
+            width: 42px;
+            height: 80px;
+    }
+    .slider .delapan {
+            animation: rotate 16s linear infinite;
+            margin-top: 30px;
+            margin-left: -90px;
+            width: 35px;
+            height: 65px;
+    }
+    
+    .wrapper {
+            display: flex;
+    }
+    
+    @keyframes rotate {
+            0% {
+                    transform: perspective(1000px) rotateY(0deg);
+            }
+    
+            100% {
+                    transform: perspective(1000px) rotateY(360deg);
+            }
+    }
+    
+    @keyframes fadeIn {
+            /* Gantii 0% menjadi 10% dan isi nya di bawah ini setelah selesai setting semua final
+            10% {
+                    opacity: 0.09;
+            } */
+            10% {
+                    opacity: 0.09;
+            }
+            20% {
+                    opacity: 0.2;
+            }
+            20% {
+                    opacity: 0.4;
+            }
+            30% {
+                    opacity: 0.7;
+            }
+            40% {
+                    opacity: 1;
+            }
+            50% {
+                    opacity: 0.8;
+            }
+            60% {
+                    opacity: 0.6;
+            }
+            70% {
+                    opacity: 0.4;
+            }
+            80% {
+                    opacity: 0.2;
+            }
+            100% {
+              opacity: 0.1;
+            }
+          }
+      
+        .birthday-card {
         position: relative;
-        top: 100%;
+        width: 300px;
+        height: 395px;
+        border: 10px solid #ef5050;
+        margin: 60px auto 0 auto;
+        -webkit-box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0.5))), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXxBT3o0SFFDbVdEa3x8ZW58MHx8fHw%3D&w=1000&q=80");
+        background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXxBT3o0SFFDbVdEa3x8ZW58MHx8fHw%3D&w=1000&q=80");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
-}
-
-@media (max-width: 375px) {
-    .birthday-card, .cover-inner {
-        width: 150px;
-        height: 230px;
-        font-size: 10px;
-        margin-right: 16px;
-    }
-
-    .cover-outer {
-        height: 300px;
-    }
-
-    .birthday-card .text .title {
-        margin: 15px auto 60px auto;
+    
+      #container {
+            width: 300px;
+            margin-left: 24px;
       }
-}
-
-
-@media (max-width: 320px) {
-    .birthday-card, .cover-outer, .cover-inner {
-        width: 130px;
-        height: 200px;
-        font-size: 8px;
-        margin-right: 5px;
+      
+    
+      .birthday-card .text {
+        font-family: 'Nobile', sans-serif;
+        margin-top: -50px;
+      }
+      
+      .birthday-card .text > p {
+        font-size: 1.1em;
+        color: #331717;
+        list-style: 1.4;
+        font-style: italic;
+        text-align: center;
+        margin-top: -20px;
+        padding: 20px 5px 0 5px;
+      }
+      
+      .birthday-card .text .title {
+        font-size: 1.5em;
+      }
+      
+      .birthday-card .cover-outer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: -10px 0 0 -10px;
+        border: 10px solid #ef5050;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        -webkit-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+        -webkit-transform: perspective(800px) rotateY(0deg);
+                transform: perspective(800px) rotateY(0deg);
+        -webkit-transition: all 2.5s ease-in-out;
+        transition: all 2.5s ease-in-out;
+      }
+      
+      .birthday-card .cover-outer img {
+        -webkit-box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+                box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+      }
+      
+      .birthday-card .cover-inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #ef5050;
+        background-color: #ef5050;
+        margin: -10px 0px 0 -10px;
+        -webkit-backface-visibility: visible;
+                backface-visibility: visible;
+        -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+                filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        -webkit-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+        -webkit-transform: perspective(800px) rotateY(0deg);
+                transform: perspective(800px) rotateY(0deg);
+        -webkit-transition: all 2.5s ease-in-out;
+        transition: all 2.5s ease-in-out;
+        overflow: hidden;
+      }
+      
+      .birthday-card .cover-inner img {
+        -webkit-transform: rotateY(170deg);
+                transform: rotateY(170deg);
+      }
+      
+      .birthday-card:hover .cover-outer {
+        -webkit-transform: perspective(800px) rotateY(-170deg);
+                transform: perspective(800px) rotateY(-170deg);
+      }
+      
+      .birthday-card:hover .cover-inner {
+        -webkit-transform: perspective(800px) rotateY(-170deg);
+                transform: perspective(800px) rotateY(-170deg);
+        -webkit-box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+      }
+    
+      @media (max-width: 425px) {
+        .birthday-card, .cover-inner {
+            width: 170px;
+            height: 250px;
+            font-size: 10px;
+            margin-right: 20px;
+        }
+    
+        .cover-outer {
+            height: 300px;
+        }
+    
+        .birthday-card .text .title {
+            margin: 40px auto 60px auto;
+          }
+    
+          body .slider span img {
+            width: 70px;
+            height: 130px;
+            display: inline-block;
+          }
+    
+          body .slider span img .dua {
+            width: 70px;
+            height: 130px;
+            display: absolute;
+            position: relative;
+            top: 100%;
+          }
     }
+    
+    @media (max-width: 375px) {
+        .birthday-card, .cover-inner {
+            width: 150px;
+            height: 230px;
+            font-size: 10px;
+            margin-right: 16px;
+        }
+    
+        .cover-outer {
+            height: 300px;
+        }
+    
+        .birthday-card .text .title {
+            margin: 40px 4px 40px 4px;
+          }
+
+          .birthday-card {
+                margin: 50px auto auto 80px ;
+          }
+
+        .animating {
+                transform: translateX(87px); /* Move content down after click */
+              } 
+
+        .slider .satu, .dua, .tiga {
+                padding-left: 15px ;
+        }
+        .slider .empat {
+                animation: rotate 18s linear infinite;
+                margin-top: -340px;
+                margin-left: -290px;
+                width: 40px;
+                height: 80px; 
+        }
+
+        .slider .lima {
+                animation: rotate 11s linear infinite;
+                margin-top: -330px;
+                margin-left: -100px;
+                width: 28px;
+                height: 52px;
+        }
+        
+        .slider .enam {
+                animation: rotate 14s linear infinite;
+                margin-top: -160px;
+                margin-left: -330px;
+                width: 50px;
+                height: 90px;
+        }
+        
+        .slider .tujuh {
+                animation: rotate 13s linear infinite;
+                margin-top: -16px;
+                margin-left: -250px;
+                width: 42px;
+                height: 80px;
+        }
+        .slider .delapan {
+                animation: rotate 16s linear infinite;
+                margin-top: 30px;
+                margin-left: -90px;
+                width: 35px;
+                height: 65px;
+        }
 }
+    
+    
+    @media (max-width: 320px) {
+        .birthday-card, .cover-outer, .cover-inner {
+            width: 130px;
+            height: 200px;
+            font-size: 8px;
+            margin-right: 5px;
+        }
+    }

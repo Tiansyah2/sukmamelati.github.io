@@ -28,7 +28,7 @@ let showOrHide = function(){
 // menghilang opacity
 
 const element = document.getElementById('animasi');
-const showTime = 300000; // Waktu (dalam milidetik) ketika konten akan muncul (3 detik dalam contoh ini)
+const showTime = 3000000; // Waktu (dalam milidetik) ketika konten akan muncul (3 detik dalam contoh ini)
 
   setTimeout(() => {
     element.style.animation = 'none'; // Menghapus animasi agar konten muncul langsung
